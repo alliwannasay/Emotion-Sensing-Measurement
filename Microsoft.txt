@@ -1,0 +1,14 @@
+Microsoft
+Cognitive Services
+
+type:
+anger, contempt, disgust, fear, happiness, neutral, sadness, and surprise
+
+Emotion API:
+1. Emotion Recognition
+The supported input image formats includes JPEG, PNG, GIF(the first frame), BMP. Image file size should be no larger than 4MB. 
+2.The detectable face size range is 36x36 to 4096x4096 pixels.
+3.For each image, the maximum number of faces detected is 64 and the faces are ranked by face rectangle size in descending order. If no face is detected, an empty array will be returned. 
+
+
+

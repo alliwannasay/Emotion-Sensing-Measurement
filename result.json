@@ -1,0 +1,38 @@
+[
+  {
+    "faceRectangle": {
+      "left": 224,
+      "top": 77,
+      "width": 89,
+      "height": 89
+    },
+    "scores": {
+      "anger": 0.000039783,
+      "contempt": 0.00003911471,
+      "disgust": 0.008020439,
+      "fear": 1.73832948e-8,
+      "happiness": 0.9682537,
+      "neutral": 0.0234318171,
+      "sadness": 0.0000766942758,
+      "surprise": 0.000138463845
+    }
+  },
+  {
+    "faceRectangle": {
+      "left": 80,
+      "top": 96,
+      "width": 84,
+      "height": 84
+    },
+    "scores": {
+      "anger": 0.000141986427,
+      "contempt": 0.0000032252733,
+      "disgust": 0.000219356545,
+      "fear": 2.45755416e-7,
+      "happiness": 0.9995464,
+      "neutral": 0.0000768485042,
+      "sadness": 0.000005436333,
+      "surprise": 0.0000064982537
+    }
+  }
+]
