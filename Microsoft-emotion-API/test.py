@@ -4,6 +4,7 @@ from PIL import Image
 import types
 import os
 import time
+
 headers = {
     # Request headers
     'Content-Type': 'application/octet-stream',
@@ -15,6 +16,9 @@ rule = {'disgust':0,'sadness':1,'neutral':2,'happiness':3,'fear':4,'contempt':5,
 params = urllib.parse.urlencode({
 })
 
+out=open("result.txt","w+")
+
+
 conn = http.client.HTTPSConnection('api.cognitive.azure.cn')
 for testLabel in os.listdir(r"./tmp"):
     try:
@@ -25,7 +29,7 @@ for testLabel in os.listdir(r"./tmp"):
             restr += testLabel + "/" + filename
             restr += "\tLabel\t" + str(rule[testLabel])
             body = open(r"./tmp/" + testLabel + "/" + filename, mode='rb')
-            time.sleep(26)
+            time.sleep(1)
             try:
                 time1 = time.time()
                 conn.request("POST", "/emotion/v1.0/recognize?%s" % params, body, headers)
@@ -50,7 +54,9 @@ for testLabel in os.listdir(r"./tmp"):
                             continue
                     else:
                         continue
+                restr += "\n"
                 print(restr)
+                out.write(restr)
             except Exception as e1:
                 print("Error in",e1)
                 continue
