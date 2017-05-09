@@ -29,7 +29,7 @@ for testLabel in os.listdir(r"./tmp"):
             restr += testLabel + "/" + filename
             restr += "\tLabel\t" + str(rule[testLabel])
             body = open(r"./tmp/" + testLabel + "/" + filename, mode='rb')
-            time.sleep(1)
+            time.sleep(26)
             try:
                 time1 = time.time()
                 conn.request("POST", "/emotion/v1.0/recognize?%s" % params, body, headers)
